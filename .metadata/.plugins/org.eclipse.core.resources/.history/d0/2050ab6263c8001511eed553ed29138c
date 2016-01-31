@@ -1,0 +1,28 @@
+package com.jspiders.spinner;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+public class MainActivity extends Activity {
+
+	Spinner phonesspinner;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		String[] phonebrands = {"Sony","Samsung","Moto","Apple","Micromax","HTC","Blackberry","MI","Lenovo"};
+		
+		phonesspinner = (Spinner) findViewById(R.id.spinnerphones);
+		
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_spinner_dropdown_item,phonebrands);
+		phonesspinner.setAdapter(adapter);
+		
+		
+	}
+
+
+}
