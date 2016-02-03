@@ -70,14 +70,4 @@
         android:layout_marginTop="23dp"
         android:text="ToggleButton" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/radioGroup1"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="15dp"
-        android:text="Switch" />
-
 </RelativeLayout>

@@ -24,7 +24,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080009;
+        public static final int action_settings=0x7f080008;
         public static final int checkBoxoption1=0x7f080000;
         public static final int checkBoxoption2=0x7f080001;
         public static final int radio0=0x7f080003;
@@ -32,7 +32,6 @@ public final class R {
         public static final int radio2=0x7f080005;
         public static final int radio3=0x7f080006;
         public static final int radioGroup1=0x7f080002;
-        public static final int switch1=0x7f080008;
         public static final int toggleButton1=0x7f080007;
     }
     public static final class layout {

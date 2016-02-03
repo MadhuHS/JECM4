@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=MyAPP,APP1,Login,Widgets,Spinner
+task-tag-projects-already-scanned=MyAPP,APP1,Login,Widgets,Spinner,ListView,ActivityLifeCycle,ExplicitIntents
