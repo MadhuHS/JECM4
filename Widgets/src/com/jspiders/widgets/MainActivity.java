@@ -68,22 +68,7 @@ public class MainActivity extends Activity implements android.widget.RadioGroup.
 	@Override
 	public void onCheckedChanged(RadioGroup arg0, int id) 
 	{
-		switch (id) 
-		{
-		case 0:Log.d("[DEBUG]", "1st Radio button is selected");
-		break;
-		
-		case 1:Log.d("[DEBUG]", "2nd Radio button is selected");
-		break;
-		
-		case 2:Log.d("[DEBUG]", "3rd Radio button is selected");
-		break;
-		
-		case 3:Log.d("[DEBUG]", "4th Radio button is selected");
-
-		default:
-			break;
-		}
+		Log.d("debug",""+arg0.getCheckedRadioButtonId());
 		
 	}
 
