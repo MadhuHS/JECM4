@@ -35,4 +35,14 @@
         android:layout_marginTop="30dp"
         android:text="CLick to browse" />
 
+    <ImageView
+        android:id="@+id/imageViewoutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonbrowse"
+        android:src="@drawable/images" />
+
 </RelativeLayout>
