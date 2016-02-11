@@ -5,14 +5,14 @@
     android:orientation="horizontal" >
 
     <fragment
-        android:id="@+id/fragment1"
+        android:id="@+id/fragment_list"
         android:name="com.jspiders.multipanefragments.VersionList"
         android:layout_height="match_parent"
         android:layout_width="0dp"
         android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/fragment2"
+        android:id="@+id/fragment_description"
         android:name="com.jspiders.multipanefragments.VersionDescription"
         android:layout_width="0dp"
         android:layout_height="match_parent"

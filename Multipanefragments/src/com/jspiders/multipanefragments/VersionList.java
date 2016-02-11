@@ -31,8 +31,10 @@ public class VersionList extends ListFragment {
     
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-    	// TODO Auto-generated method stub
     	super.onListItemClick(l, v, position, id);
+    	
+    	Communicator communicator = (Communicator) getActivity();
+    	communicator.onPositionchangedListner(position);
     	
     	
     }

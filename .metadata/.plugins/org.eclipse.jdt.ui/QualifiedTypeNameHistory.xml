@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
-<fullyQualifiedTypeName name="com.jspiders.myapp.MainActivity"/>
-<fullyQualifiedTypeName name="com.jspiders.myapp.R.id"/>
-<fullyQualifiedTypeName name="com.jsp.login.R.id"/>
-<fullyQualifiedTypeName name="android.widget.CheckBox"/>
 <fullyQualifiedTypeName name="android.widget.RadioGroup"/>
 <fullyQualifiedTypeName name="android.widget.RadioGroup.OnCheckedChangeListener"/>
 <fullyQualifiedTypeName name="com.jspiders.widgets.R.id"/>
@@ -32,13 +27,11 @@
 <fullyQualifiedTypeName name="android.graphics.Bitmap"/>
 <fullyQualifiedTypeName name="com.jspiders.implicitintents.R.id"/>
 <fullyQualifiedTypeName name="com.jspiders.implicitintents.R.drawable"/>
-<fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.jspiders.intentsdemo.SecondActivity"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.jspiders.intentsdemo.R.id"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
-<fullyQualifiedTypeName name="android.os.Bundle"/>
 <fullyQualifiedTypeName name="com.jspiders.intentsdemo.MainActivity"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
@@ -48,8 +41,6 @@
 <fullyQualifiedTypeName name="com.example.fragmentsdemo.R.layout"/>
 <fullyQualifiedTypeName name="com.jspiders.dynamicfragment.R.layout"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="android.app.FragmentManager"/>
-<fullyQualifiedTypeName name="android.app.FragmentTransaction"/>
 <fullyQualifiedTypeName name="com.jspiders.dynamicfragment.DynamicFragments"/>
 <fullyQualifiedTypeName name="com.jspiders.dynamicfragment.R.id"/>
 <fullyQualifiedTypeName name="android.app.ListFragment"/>
@@ -59,5 +50,14 @@
 <fullyQualifiedTypeName name="com.jspiders.multipanefragments.R.layout"/>
 <fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.jspiders.multipanefragments.Communicator"/>
 <fullyQualifiedTypeName name="com.jspiders.multipanefragments.VersionList"/>
+<fullyQualifiedTypeName name="android.app.FragmentManager"/>
+<fullyQualifiedTypeName name="android.app.FragmentTransaction"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.webkit.WebView.FindListener"/>
+<fullyQualifiedTypeName name="com.jspiders.multipanefragments.VersionDescription"/>
+<fullyQualifiedTypeName name="com.jspiders.multipanefragments.R.id"/>
+<fullyQualifiedTypeName name="android.view.animation.DecelerateInterpolator"/>
+<fullyQualifiedTypeName name="android.os.Bundle"/>
 </qualifiedTypeNameHistroy>

@@ -25,9 +25,9 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f080005;
-        public static final int fragment1=0x7f080001;
-        public static final int fragment2=0x7f080002;
         public static final int fragment_container=0x7f080000;
+        public static final int fragment_description=0x7f080002;
+        public static final int fragment_list=0x7f080001;
         public static final int listView1=0x7f080003;
         public static final int textView1=0x7f080004;
     }
