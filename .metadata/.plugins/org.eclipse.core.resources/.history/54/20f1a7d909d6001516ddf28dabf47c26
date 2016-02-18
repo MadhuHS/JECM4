@@ -1,0 +1,39 @@
+package com.jsp.loadimage;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import android.os.AsyncTask;
+
+public class NetworkingTask extends AsyncTask<Void, Void, Void> {
+
+	public NetworkingTask() 
+	{
+	
+	}
+
+	
+	
+	@Override
+	protected Void doInBackground(Void... arg0) 
+	{
+		
+		try 
+		{
+			URL imgUrl = new URL("http://techstory.in/wp-content/uploads/2015/02/sachin-tendulkar-sifr-651867782.jpg");
+		} 
+		
+		catch (MalformedURLException e)
+		{
+						e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
+	@Override
+	protected void onPostExecute(Void result) {
+		super.onPostExecute(result);
+	}
+
+}

@@ -1,7 +1,0 @@
-package com.jspiders.multipanefragments;
-
-import android.app.ListFragment;
-
-public class VersionList extends ListFragment {
-
-}

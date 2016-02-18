@@ -1,0 +1,75 @@
+package com.example.asynctaskdemo;
+
+import android.app.Notification;
+import android.os.AsyncTask;
+import android.support.v4.app.NotificationCompat;
+import android.util.Log;
+import android.widget.TextView;
+
+
+public class BackgroundTask extends AsyncTask<Void,String, Void> {
+
+	TextView btTextView;
+	
+	public BackgroundTask(TextView maTextview) 
+	{
+	   btTextView = maTextview;
+	}
+	
+	
+	@Override
+	protected void onPreExecute() 
+	{
+		super.onPreExecute();
+		Log.d("DEBUG", "inside on onPreExecute()");
+	 
+		NotificationCompat.Builder  builder = new NotificationCompat.Builder();
+		
+		btTextView.setText("Download started.....");
+	}
+	
+	@Override
+	protected Void doInBackground(Void... arg0) 
+	{
+		Log.d("DEBUG", "inside on doInBackground()");
+
+		for (int i = 0; i < 100; i++) 
+		{
+			try 
+			{
+				Thread.sleep(100);
+				publishProgress(String.valueOf(i));
+				Log.d("DEBUG","Value of i is "+i);
+			} 
+			
+			catch (InterruptedException e) 
+			{
+				e.printStackTrace();
+			}
+		}
+		
+		return null;
+	}
+	
+	@Override
+	protected void onProgressUpdate(String... values) 
+	{
+		super.onProgressUpdate(values);
+		btTextView.setText(values[0]+"%");
+		Log.d("DEBUG", "inside on onProgressUpdate()");
+
+	}
+	
+	@Override
+	protected void onPostExecute(Void result) 
+	{
+		super.onPostExecute(result);
+		btTextView.setText("Download Completed...");
+		Log.d("DEBUG", "inside on onPostExecute()");
+
+	}
+	
+	
+
+	
+}

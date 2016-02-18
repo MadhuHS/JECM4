@@ -1,7 +1,0 @@
-package com.jspiders.dynamicfragment;
-
-import android.app.Fragment;
-
-public class DynamicFragments extends Fragment {
-
-}

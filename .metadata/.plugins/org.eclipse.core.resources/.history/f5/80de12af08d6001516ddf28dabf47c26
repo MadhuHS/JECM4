@@ -1,0 +1,19 @@
+package com.jsp.loadimage;
+
+import android.os.AsyncTask;
+
+public class NetworkingTask extends AsyncTask<Void, Void, Void> {
+
+	public NetworkingTask() 
+	{
+	}
+	
+	
+	@Override
+	protected Void doInBackground(Void... arg0) 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
