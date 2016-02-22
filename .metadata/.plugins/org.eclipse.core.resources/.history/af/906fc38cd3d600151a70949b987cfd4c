@@ -1,0 +1,9 @@
+package com.jsp.weatherupdates;
+
+public class JsonParser {
+
+	public static Bundle parsejson()
+	{
+		return null;
+	}
+}

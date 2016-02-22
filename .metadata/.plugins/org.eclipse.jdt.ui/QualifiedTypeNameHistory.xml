@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.widget.RelativeLayout.LayoutParams"/>
-<fullyQualifiedTypeName name="com.example.fragmentsdemo.R.layout"/>
-<fullyQualifiedTypeName name="com.jspiders.dynamicfragment.R.layout"/>
-<fullyQualifiedTypeName name="com.jspiders.dynamicfragment.DynamicFragments"/>
-<fullyQualifiedTypeName name="com.jspiders.dynamicfragment.R.id"/>
-<fullyQualifiedTypeName name="android.app.ListFragment"/>
-<fullyQualifiedTypeName name="android.app.Fragment"/>
 <fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
 <fullyQualifiedTypeName name="com.jspiders.multipanefragments.R.layout"/>
 <fullyQualifiedTypeName name="android.R"/>
@@ -19,7 +12,6 @@
 <fullyQualifiedTypeName name="com.jspiders.multipanefragments.VersionDescription"/>
 <fullyQualifiedTypeName name="com.jspiders.multipanefragments.R.id"/>
 <fullyQualifiedTypeName name="android.view.animation.DecelerateInterpolator"/>
-<fullyQualifiedTypeName name="android.os.Bundle"/>
 <fullyQualifiedTypeName name="android.content.BroadcastReceiver"/>
 <fullyQualifiedTypeName name="android.app.Service"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
@@ -31,7 +23,6 @@
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="com.example.asynctaskdemo.BackgroundTask"/>
-<fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="android.support.v4.app.NotificationCompat"/>
 <fullyQualifiedTypeName name="android.support.v4.app.NotificationCompat.Builder"/>
@@ -44,20 +35,29 @@
 <fullyQualifiedTypeName name="com.example.imageloader.ImageLoader"/>
 <fullyQualifiedTypeName name="java.net.URLStreamHandlerFactory"/>
 <fullyQualifiedTypeName name="android.graphics.Bitmap"/>
-<fullyQualifiedTypeName name="android.util.Log"/>
-<fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.jsp.loadimage.R.id"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="android.os.AsyncTask"/>
 <fullyQualifiedTypeName name="java.lang.Void"/>
-<fullyQualifiedTypeName name="java.net.URL"/>
-<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="android.graphics.BitmapFactory"/>
 <fullyQualifiedTypeName name="com.jsp.loadimage.NetworkingTask"/>
 <fullyQualifiedTypeName name="android.widget.ImageView"/>
-<fullyQualifiedTypeName name="android.net.ConnectivityManager"/>
 <fullyQualifiedTypeName name="com.jsp.loadimage.MainActivity"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.net.ConnectivityManager"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.os.AsyncTask"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.jsp.weatherupdates.NetwrokJob"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="com.jsp.weatherupdates.JsonParser"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="android.os.Bundle"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.net.NetworkInfo"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
 </qualifiedTypeNameHistroy>

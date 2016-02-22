@@ -1,0 +1,82 @@
+package com.jsp.weatherupdates;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+
+public class NetwrokJob extends AsyncTask<Void, Void, Void> {
+
+	TextView njCityname,njTemp;
+	String Stupdateurl = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=44db6a862fba0b067b1930da0d769e98";
+	
+	public NetwrokJob(TextView maCityname,TextView maTemp ) 
+	{
+	       njCityname = maCityname;
+	       njTemp = maTemp;
+	}
+	
+	
+	@Override
+	protected Void doInBackground(Void... params) 
+	{
+		try 
+		{
+			URL updateurl = new URL(Stupdateurl);
+			HttpURLConnection connection = (HttpURLConnection) updateurl.openConnection();
+			
+			InputStream ins = connection.getInputStream();
+			
+			InputStreamReader inputStreamReader = new InputStreamReader(ins);
+			
+			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			
+			StringBuffer buffer = new StringBuffer();
+			
+			String line = "";
+			
+			while((bufferedReader.readLine())!=null)
+			{
+				buffer.append(line+bufferedReader.readLine()+"/n"+"/r");
+			}
+			
+			String result = buffer.toString();
+			Log.d("JSON RESPONSE", result);
+			
+			Bundle b1 = JsonParser.parsejson(result);
+			
+			
+		} 
+		
+		catch (MalformedURLException e) 
+		
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	@Override
+	protected void onPostExecute(Void result)
+	{
+		
+		super.onPostExecute(result);
+	}
+
+}

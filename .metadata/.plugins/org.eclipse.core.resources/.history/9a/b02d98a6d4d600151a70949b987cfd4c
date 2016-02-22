@@ -1,0 +1,31 @@
+package com.jsp.weatherupdates;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.os.Bundle;
+
+public class JsonParser {
+
+	public static Bundle parsejson(String result)
+	{
+		try 
+		
+		{
+			JSONObject rootObject = new JSONObject(result);
+			
+			JSONObject mainObject = rootObject.getJSONObject("main");
+			
+			mainObject.getDouble("temp");
+		}
+		
+		
+		catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+}

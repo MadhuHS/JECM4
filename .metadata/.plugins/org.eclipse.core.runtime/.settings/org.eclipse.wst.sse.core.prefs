@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=MyAPP,APP1,Login,Widgets,Spinner,ListView,ActivityLifeCycle,ExplicitIntents,ImplicitIntents,IntentsDemo,LayoutsDemo,DynamicFragment,FragmentsDemo,MultiPane,Multipanefragments,BroadCastRecvrs,ServicesDemo,AsynctaskDemo,ThreadsDemo
+task-tag-projects-already-scanned=MyAPP,APP1,Login,Widgets,Spinner,ListView,ActivityLifeCycle,ExplicitIntents,ImplicitIntents,IntentsDemo,LayoutsDemo,DynamicFragment,FragmentsDemo,MultiPane,Multipanefragments,BroadCastRecvrs,ServicesDemo,AsynctaskDemo,ThreadsDemo,LoadImage,WeatherUpdates
