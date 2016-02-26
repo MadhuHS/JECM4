@@ -1,0 +1,167 @@
+package com.jspiders.project1;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import android.R.string;
+import android.os.AsyncTask;
+import android.util.Log;
+
+public class BackgroundTask extends AsyncTask<String,Void, Void> 
+{
+
+	@Override
+	protected Void doInBackground(String... params) 
+	{
+		if(params[0].equals("login"))
+		{
+			Log.d("TRACKING","RUNNING LOGIN");
+			
+			String username =  params[1];
+			String password = params[2];
+			
+			try 
+			{
+				URL login_url =  new URL("http://10.0.2.2/mobileapp/login.php");
+				HttpURLConnection connection =  (HttpURLConnection) login_url.openConnection();
+				
+				connection.setRequestMethod("POST");
+				
+				connection.setDoInput(true);
+				
+				connection.setDoOutput(true);
+				
+				OutputStream outputStream = connection.getOutputStream();
+				
+				OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+				
+				BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+				
+				String data_string = URLEncoder.encode("username","UTF-8") +"="+URLEncoder.encode(username,"UTF-8")
+						             +"&"+URLEncoder.encode("password","UTF-8") +"="+URLEncoder.encode(password,"UTF-8");
+				
+				bufferedWriter.write(data_string);
+				
+                InputStream inputStream = connection.getInputStream();
+			    
+			    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+			    
+			    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			    
+			    StringBuffer stringBuffer = new StringBuffer();
+			    
+			    String line = "";
+			    
+			    while((line = bufferedReader.readLine())!=null)
+			    {
+			    	stringBuffer.append(line+"/n"+"/r");
+			    }
+			    
+			    String server_response =  stringBuffer.toString();
+			    
+			    Log.d("DEBUG",server_response);
+			} 
+			
+			catch (MalformedURLException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+			
+
+		}
+		
+		else if (params[0].equals("register"))
+		{
+			Log.d("TRACKING","RUNNING REGSTER");
+			try 
+			{
+				 String entname = params[1];
+				 String entusername = params[2];
+				 String entmobile = params[3];
+				 String entPassword = params[4];
+				
+				URL registerurl = new URL("http://10.0.2.2/mobileapp/register.php");
+				HttpURLConnection connection = (HttpURLConnection) registerurl.openConnection();
+				
+				connection.setRequestMethod("POST");
+				
+				connection.setDoOutput(true);
+				
+				connection.setDoInput(true);
+				
+				OutputStream outputStream =  connection.getOutputStream();
+				
+				OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream,"UTF-8");
+				
+				BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+				
+				String data_string = URLEncoder.encode("ent_name","UTF-8") +"="+ URLEncoder.encode(entname,"UTF-8")
+						             + "&"+ URLEncoder.encode("ent_username","UTF-8") +"="+ URLEncoder.encode(entusername,"UTF-8")
+						             +"&"+URLEncoder.encode("ent_mobile","UTF-8") +"="+ URLEncoder.encode(entmobile,"UTF-8")
+						             +"&"+URLEncoder.encode("ent_password","UTF-8") +"="+ URLEncoder.encode(entPassword,"UTF-8");
+			    Log.d("TRACKING",data_string);
+				
+			    bufferedWriter.write(data_string);
+			    
+			    InputStream inputStream = connection.getInputStream();
+			    
+			    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+			    
+			    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			    
+			    StringBuffer stringBuffer = new StringBuffer();
+			    
+			    String line = "";
+			    
+			    while((line = bufferedReader.readLine())!=null)
+			    {
+			    	stringBuffer.append(line+"/n"+"/r");
+			    }
+			    
+			    String server_response =  stringBuffer.toString();
+			    
+			    Log.d("DEBUG",server_response);
+				
+				
+			} 
+			
+			
+			
+			
+			
+		
+			
+			catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			
+			catch (IOException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+
+
+
+
+}

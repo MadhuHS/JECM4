@@ -1,0 +1,21 @@
+package com.jspiders.project1;
+
+import android.os.AsyncTask;
+
+public class BackgroundTask extends AsyncTask<String,Void, Void> 
+{
+
+	@Override
+	protected Void doInBackground(String... params) 
+	{
+		if(params[0].equals("login"))
+		{
+			
+		}
+		return null;
+	}
+
+
+
+
+}

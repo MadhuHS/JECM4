@@ -1,0 +1,78 @@
+package com.jspiders.project1;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import android.os.AsyncTask;
+
+public class BackgroundTask extends AsyncTask<String,Void, Void> 
+{
+
+	@Override
+	protected Void doInBackground(String... params) 
+	{
+		if(params[0].equals("login"))
+		{
+			
+		}
+		
+		else if (params[0].equals("register"))
+		{
+			try 
+			{
+				 String entname = params[1];
+				 String entusername = params[2];
+				 String entmobile = params[3];
+				 String entPassword = params[4];
+				
+				URL registerurl = new URL("http://localhost/mobileapp/register.php");
+				HttpURLConnection connection = (HttpURLConnection) registerurl.openConnection();
+				connection.setRequestMethod("POST");
+				
+				connection.setDoOutput(true);
+				
+				connection.setDoInput(true);
+				
+				OutputStream outputStream =  connection.getOutputStream();
+				
+				OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+				
+				BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+				
+				URLEncoder.encode("entname","utf-8");
+				
+				
+				
+				bufferedWriter.write(buf);
+			} 
+			
+			
+			
+			
+			
+		
+			
+			catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			
+			catch (IOException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+
+
+
+
+}

@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
-<fullyQualifiedTypeName name="com.jspiders.multipanefragments.R.layout"/>
-<fullyQualifiedTypeName name="android.R"/>
-<fullyQualifiedTypeName name="android.R.layout"/>
-<fullyQualifiedTypeName name="com.jspiders.multipanefragments.Communicator"/>
-<fullyQualifiedTypeName name="com.jspiders.multipanefragments.VersionList"/>
-<fullyQualifiedTypeName name="android.app.FragmentManager"/>
-<fullyQualifiedTypeName name="android.app.FragmentTransaction"/>
-<fullyQualifiedTypeName name="android.webkit.WebView.FindListener"/>
-<fullyQualifiedTypeName name="com.jspiders.multipanefragments.VersionDescription"/>
 <fullyQualifiedTypeName name="com.jspiders.multipanefragments.R.id"/>
 <fullyQualifiedTypeName name="android.view.animation.DecelerateInterpolator"/>
 <fullyQualifiedTypeName name="android.content.BroadcastReceiver"/>
 <fullyQualifiedTypeName name="android.app.Service"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.jspiders.servicesdemo.MainActivity"/>
 <fullyQualifiedTypeName name="com.jspiders.servicesdemo.DemoService"/>
 <fullyQualifiedTypeName name="com.jspiders.servicesdemo.R.raw"/>
@@ -27,7 +16,6 @@
 <fullyQualifiedTypeName name="android.support.v4.app.NotificationCompat"/>
 <fullyQualifiedTypeName name="android.support.v4.app.NotificationCompat.Builder"/>
 <fullyQualifiedTypeName name="com.example.asynctaskdemo.MainActivity"/>
-<fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="android.app.NotificationManager"/>
 <fullyQualifiedTypeName name="com.example.asynctaskdemo.R.drawable"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -48,16 +36,28 @@
 <fullyQualifiedTypeName name="android.os.AsyncTask"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.jsp.weatherupdates.NetwrokJob"/>
-<fullyQualifiedTypeName name="java.net.URL"/>
-<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="com.jsp.weatherupdates.JsonParser"/>
+<fullyQualifiedTypeName name="android.os.Bundle"/>
+<fullyQualifiedTypeName name="android.net.NetworkInfo"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="com.jsp.weatherupdates.JsonParser"/>
-<fullyQualifiedTypeName name="org.json.JSONObject"/>
-<fullyQualifiedTypeName name="android.os.Bundle"/>
+<fullyQualifiedTypeName name="android.R.string"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
-<fullyQualifiedTypeName name="android.net.NetworkInfo"/>
-<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.net.URLEncoder"/>
+<fullyQualifiedTypeName name="android.widget.CompoundButton.OnCheckedChangeListener"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences.Editor"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.jsp.login.MainActivity"/>
+<fullyQualifiedTypeName name="com.jsp.login.HomeActivity"/>
 </qualifiedTypeNameHistroy>

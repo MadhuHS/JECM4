@@ -1,0 +1,18 @@
+package com.jspiders.project1;
+
+import android.os.AsyncTask;
+
+public class BackgroundTask extends AsyncTask<Void,Void, Void> 
+{
+
+	@Override
+	protected Void doInBackground(Void... arg0) 
+	{
+		
+		return null;
+	}
+
+
+
+
+}

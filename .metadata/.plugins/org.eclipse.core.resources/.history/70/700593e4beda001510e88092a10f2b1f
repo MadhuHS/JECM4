@@ -1,0 +1,20 @@
+package com.jspiders.project1;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.EditText;
+
+public class RegisterActivity extends Activity {
+
+	EditText nameEditText,usernameEditText,mobileEditText,passwordEditText;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_register);
+	}
+
+	
+
+}

@@ -1,0 +1,28 @@
+package com.jspiders.project1;
+
+import java.net.URL;
+
+import android.os.AsyncTask;
+
+public class BackgroundTask extends AsyncTask<String,Void, Void> 
+{
+
+	@Override
+	protected Void doInBackground(String... params) 
+	{
+		if(params[0].equals("login"))
+		{
+			
+		}
+		
+		else if (params[0].equals("register"))
+		{
+			URL registerurl = new URL("http://localhost/mobileapp/register.php");
+		}
+		return null;
+	}
+
+
+
+
+}

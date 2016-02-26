@@ -1,0 +1,46 @@
+package com.jspiders.project1;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+
+	Button loginButton,registerButton;
+	EditText usernameEditText,passwordEditText;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) 
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		usernameEditText = (EditText) findViewById(R.id.editTextMAusername);
+		passwordEditText = (EditText) findViewById(R.id.editTextMApassword);
+		
+		loginButton = (Button) findViewById(R.id.buttonMAlogin);
+		registerButton = (Button) findViewById(R.id.buttonMAregister);
+		
+	}
+	
+	public void loginuser(View v)
+	{
+		
+		String ent_username = usernameEditText.getText().toString();
+		String ent_password = passwordEditText.getText().toString();
+		
+		BackgroundTask b1 = new BackgroundTask();
+		b1.execute("login",ent_username,ent_password);
+	}
+
+	public void startregister(View v)
+	{
+		Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
+		startActivity(intent);
+	}
+	
+
+}

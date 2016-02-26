@@ -1,0 +1,53 @@
+package com.jspiders.project1;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import android.os.AsyncTask;
+
+public class BackgroundTask extends AsyncTask<String,Void, Void> 
+{
+
+	@Override
+	protected Void doInBackground(String... params) 
+	{
+		if(params[0].equals("login"))
+		{
+			
+		}
+		
+		else if (params[0].equals("register"))
+		{
+			try 
+			{
+				URL registerurl = new URL("http://localhost/mobileapp/register.php");
+				HttpURLConnection connection = (HttpURLConnection) registerurl.openConnection();
+				connection.setRequestMethod("POST");
+			} 
+			
+			
+			
+			
+			
+		
+			
+			catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			
+			catch (IOException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+
+
+
+
+}
