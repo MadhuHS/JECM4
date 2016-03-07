@@ -1,0 +1,103 @@
+package com.jsp.sqlitedemo;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
+
+public class DbOperations extends SQLiteOpenHelper {
+
+	String create_table_query = "CREATE table Products_Info(Pname TEXT(10));";
+	Context Dbcontext;
+
+	
+	public DbOperations(Context context)
+	{
+		super(context,"Products_db",null,1);
+		Dbcontext=context;
+		Log.d("DEBUG","DB created");
+		
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase sqldb) {
+		
+		
+		sqldb.execSQL(create_table_query);
+        Toast.makeText(Dbcontext,"Table created", Toast.LENGTH_SHORT);
+		Log.d("DEBUG","Table created");
+		
+	}
+	
+	
+	public void addInfotoDB(String data)
+	{
+		
+		SQLiteDatabase sqdb = getWritableDatabase();
+		
+		ContentValues values = new ContentValues();
+		
+		values.put("Pname",data);
+		
+		sqdb.insert("Products_Info","n/a", values);
+		
+		Log.d("DEBUG","data inserted succesfully");
+        Toast.makeText(Dbcontext,"data inserted succesfully", Toast.LENGTH_SHORT).show();
+
+		
+	}
+	
+	public void updateprodinfoindb(String data)
+	{
+		 SQLiteDatabase sqldb = getWritableDatabase();
+		 ContentValues values = new ContentValues();
+		 values.put("Pname",data);
+		 
+		 int result = sqldb.update("Products_Info", values,"Pname="+"'"+"madhu"+"'", null);
+		 //sqldb.execSQL("UPDATE Products_Info set Pname = " +"'"+data+"'"+ "where Pname like '%qwerty%;");
+		
+		 if(result==0)
+		 {
+			Log.d("DEBUG","data not updated succesfully"+result);
+		    Toast.makeText(Dbcontext,"data not updated succesfully", Toast.LENGTH_SHORT).show();
+
+
+		 }
+		 else
+		 {
+			 Log.d("DEBUG","data updated succesfully"+result);
+			 Toast.makeText(Dbcontext,"data updated succesfully", Toast.LENGTH_SHORT).show();
+
+ 
+		 }
+		 
+	}
+	
+	
+	public Cursor showdatafromdb()
+	{
+	    SQLiteDatabase sqldb = getReadableDatabase(); 
+	    String[] columns ={"Pname"}; 
+	    Cursor cursor =  sqldb.query("Products_Info", columns, null, null, null, null, null);
+		return cursor;
+	}
+
+	public void removeDataFromDb(String name)
+	{
+	    SQLiteDatabase sqldb = getReadableDatabase(); 
+	    
+	    sqldb.delete("Products_Info", "Pname="+"'"+name+"'", null);
+
+	}
+	
+	@Override
+	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) 
+	{
+		
+		
+	}
+
+}

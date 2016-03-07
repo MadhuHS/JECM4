@@ -1,0 +1,28 @@
+package com.jspiders.internalstorage;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	EditText inputEditText;
+	Button saveButton,readButton;
+	TextView outputTextView;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		inputEditText = (EditText) findViewById(R.id.editTextinput);
+		saveButton = (Button) findViewById(R.id.buttonsave);
+		readButton = (Button) findViewById(R.id.buttonread);
+		
+	}
+
+	
+
+}

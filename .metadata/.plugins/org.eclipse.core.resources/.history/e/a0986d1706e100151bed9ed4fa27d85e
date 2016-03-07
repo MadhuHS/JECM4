@@ -1,0 +1,15 @@
+package com.jsp.sqlitedemo;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DbOperations extends SQLiteOpenHelper {
+
+	public DbOperations(Context context)
+	{
+		super(context, name, factory, version);
+		// TODO Auto-generated constructor stub
+	}
+
+}

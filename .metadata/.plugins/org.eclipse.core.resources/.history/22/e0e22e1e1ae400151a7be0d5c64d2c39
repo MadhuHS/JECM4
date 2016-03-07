@@ -1,0 +1,68 @@
+package com.jsp.sqlitedemo;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+public class DbOperations extends SQLiteOpenHelper {
+
+	String create_table_query = "CREATE table Products_Info(Pname TEXT(10));";
+	
+
+	
+	public DbOperations(Context context)
+	{
+		super(context,"Products_db",null,1);
+		
+		Log.d("DEBUG","DB created");
+		
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase sqldb) {
+		
+		
+		sqldb.execSQL(create_table_query);
+		
+		Log.d("DEBUG","Table created");
+		
+	}
+	
+	
+	public void addInfotoDB(String data)
+	{
+		
+		SQLiteDatabase sqdb = getWritableDatabase();
+		
+		ContentValues values = new ContentValues();
+		
+		values.put("Pname",data);
+		
+		sqdb.insert("Products_Info","n/a", values);
+		
+		Log.d("DEBUG","data inserted succesfully");
+		
+	}
+	
+	public void updateprodinfoindb(String data)
+	{
+		 SQLiteDatabase sqldb = getWritableDatabase();
+		 ContentValues values = new ContentValues();
+		 values.put("Pname",data);
+		 
+		 int result = sqldb.update("Products_Info", values,"Pname="+"'"+"qwerty"+"'", null);
+		 //sqldb.execSQL("UPDATE Products_Info set Pname = " +"'"+data+"'"+ "where Pname like '%qwerty%;");
+		 Log.d("DEBUG","data updated succesfully"+result);
+		 
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) 
+	{
+		
+		
+	}
+
+}

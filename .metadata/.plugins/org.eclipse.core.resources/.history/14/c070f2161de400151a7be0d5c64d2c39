@@ -1,0 +1,55 @@
+package com.jsp.sqlitedemo;
+
+import android.app.Activity;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+
+public class MainActivity extends Activity {
+
+	Button adddataButton,showButton,updateButton,deleteButton;
+	EditText inputEditText;
+	ListView productsListView;
+	
+	DbOperations dbo = new DbOperations(MainActivity.this);
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		adddataButton = (Button) findViewById(R.id.buttonAdddata);
+		showButton = (Button) findViewById(R.id.buttonretrive);
+		updateButton = (Button) findViewById(R.id.buttonupdate);
+		deleteButton = (Button) findViewById(R.id.buttondelete);
+		
+		inputEditText = (EditText) findViewById(R.id.editTextinput);
+		productsListView = (ListView) findViewById(R.id.listView1);
+		
+	}
+
+	public void addprodinfo(View v)
+	{
+		String data = inputEditText.getText().toString();
+		
+		dbo.addInfotoDB(data);
+		
+	}
+	
+	public void updateprodinfo(View v)
+	{
+		
+			String data = inputEditText.getText().toString();
+			
+			dbo.updateprodinfoindb(data);
+		
+	}
+	
+	public void retriveprodinfo(View v)
+	{
+		Cursor  bo.showdatafromdb();
+	}
+}

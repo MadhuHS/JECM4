@@ -1,0 +1,30 @@
+package com.jsp.sqlitedemo;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+public class DbOperations extends SQLiteOpenHelper {
+
+	public DbOperations(Context context)
+	{
+		super(context,"Products_db",null,1);
+		Log.d("DEBUG","DB created");
+		
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase arg0) {
+		
+		
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) 
+	{
+		
+		
+	}
+
+}
